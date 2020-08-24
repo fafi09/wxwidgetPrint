@@ -47,7 +47,7 @@ bool QuickPrint::OnPrintPage(int pageNum)
 
 
     pDC.Clear();
-    pDC.SetPen(  wxPen( wxColour(0,0,0), brush_size ) );
+   /* pDC.SetPen(  wxPen( wxColour(0,0,0), brush_size ) );
     pDC.SetBrush( *wxTRANSPARENT_BRUSH );
 
     // draw a rectangle to show its bounds.
@@ -67,10 +67,14 @@ bool QuickPrint::OnPrintPage(int pageNum)
     pDC.SetTextBackground( wxColour(255,255,0) );
     pDC.SetTextForeground( wxColour(0,0,0) );
     pDC.DrawText( label, x0 + width/5, y0 + height - 50 );
+*/
+    //wxString fileName("D4yq5P1A3n.png");
 
-    wxString fileName("D4yq5P1A3n.png");
-    wxBitmap bp(fileName,wxBITMAP_TYPE_PNG );
-    pDC.DrawBitmap(bp, 70,70);
+    pDC.SetUserScale(1.0,1.0);
+    wxImage image(_T("D:\\workspace\\wxwidgets\\wxtest\\Build.bmp"));
+    wxBitmap bp(image);
+    pDC.DrawBitmap(bp, 0,0);
+    pDC.DrawText( "dsdfsdf", 0, 0);
 
 }
 
