@@ -15,17 +15,18 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
-					<Add directory="D:/msw314/lib/gcc_dll/mswud" />
+					<Add directory="../../../wxwidgets/lib/gcc_dll/mswud" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="D:/msw314/lib/gcc_dll/mswud" />
+					<Add directory="../../../wxwidgets/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="libwxmsw31ud_core.a" />
-					<Add library="libwxbase31ud.a" />
-					<Add library="libwxpngd.a" />
-					<Add library="libwxzlibd.a" />
-					<Add directory="D:/msw314/lib/gcc_dll" />
+					<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_core.a" />
+					<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31ud.a" />
+					<Add library="../../../wxwidgets/lib/gcc_dll/libwxpngd.a" />
+					<Add library="../../../wxwidgets/lib/gcc_dll/libwxzlibd.a" />
+					<Add directory="../../../wxwidgets/lib/gcc_dll" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -37,6 +38,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="D:/msw314/lib/gcc_dll/mswu" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="D:/msw314/lib/gcc_dll/mswu" />
@@ -62,64 +64,25 @@
 			<Add directory="../../../wxwidgets/include" />
 		</Compiler>
 		<ResourceCompiler>
-			<Add directory="D:/msw314/include" />
+			<Add directory="../../../wxwidgets/include" />
 		</ResourceCompiler>
 		<Linker>
 			<Add option="-mthreads" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31u.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31u_net.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31u_xml.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31ud.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31ud_net.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxbase31ud_xml.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxexpat.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxexpatd.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxjpeg.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxjpegd.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_adv.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_aui.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_core.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_gl.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_html.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_media.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_propgrid.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_ribbon.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_richtext.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_stc.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_webview.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31u_xrc.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_adv.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_aui.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_core.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_gl.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_html.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_media.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_propgrid.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_ribbon.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_richtext.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_stc.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_webview.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxmsw31ud_xrc.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxpng.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxpngd.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxregexu.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxregexud.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxscintilla.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxscintillad.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxtiff.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxtiffd.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxzlib.a" />
-			<Add library="../../../wxwidgets/lib/gcc_dll/libwxzlibd.a" />
 		</Linker>
+		<Unit filename="include/QuickPrint.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/QuickPrint.cpp" />
 		<Unit filename="wxtestApp.cpp" />
 		<Unit filename="wxtestApp.h" />
 		<Unit filename="wxtestMain.cpp" />
 		<Unit filename="wxtestMain.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="" main="" init_handlers="necessary" language="CPP" />
+			</wxsmith>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

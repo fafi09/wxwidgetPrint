@@ -5328,8 +5328,9 @@
 	"wx/gdicmn.h"
 	"wx/stream.h"
 
-1598253380 source:d:\workspace\wxwidgets\wxtest\src\quickprint.cpp
+1598345254 source:d:\workspace\wxwidgets\wxtest\src\quickprint.cpp
 	"QuickPrint.h"
+	"Barcode128.h"
 
 1598253855 d:\workspace\wxwidgets\wxtest\include\quickprint.h
 	<iostream>
@@ -5373,4 +5374,16 @@
 	"wx/dialog.h"
 	"wx/intl.h"
 	"wx/cmndata.h"
+
+1598339281 source:d:\workspace\wxwidgets\wxtest\src\barcodebase.cpp
+	"BarcodeBase.h"
+
+1598342364 d:\workspace\wxwidgets\wxtest\include\barcodebase.h
+	<wx/dc.h>
+
+1598339291 source:d:\workspace\wxwidgets\wxtest\src\barcode128.cpp
+	"Barcode128.h"
+
+1598339298 d:\workspace\wxwidgets\wxtest\include\barcode128.h
+	"BarcodeBase.h"
 

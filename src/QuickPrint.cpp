@@ -1,4 +1,5 @@
 #include "QuickPrint.h"
+#include "Barcode128.h"
 
 QuickPrint::QuickPrint(int page_amount)
 {
@@ -70,12 +71,25 @@ bool QuickPrint::OnPrintPage(int pageNum)
 */
     //wxString fileName("D4yq5P1A3n.png");
 
-    pDC.SetUserScale(1.0,1.0);
+    pDC.SetFont(wxFont(25, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, "宋体"));
+    pDC.SetUserScale(4.0,4.0);
+
+    //pDC.SetMapMode(wxMM_TEXT);
+	//pDC.SetUserScale(1.0,1.0);
     wxImage image(_T("D:\\workspace\\wxwidgets\\wxtest\\Build.bmp"));
     wxBitmap bp(image);
-    pDC.DrawBitmap(bp, 0,0);
-    pDC.DrawText( "dsdfsdf", 0, 0);
+    pDC.DrawBitmap(bp, 30,10);
+    pDC.DrawText( "天气名称：", 50, 40);
+    pDC.SetFont(wxFont(20, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, "宋体"));
+    pDC.DrawText( "人气名称：", 50, 80);
 
+    char barcode[20] = {'2','2','2','2','0','8','0','9','5','1','0','0','0','0','0','1','\0','\0','\0','\0'};
+    //char barcode[3] = {'A','B','C'};
+    Barcode128 gen;
+    gen.Encode128C(barcode);
+    //gen.Encode128A(barcode);
+    std::cout << gen.ia_Buf[1] << gen.i_LenBuf << std::endl;
+    gen.Draw128(pDC,120,192,400,*wxBLACK, *wxWHITE, 3);
 }
 
 bool QuickPrint::HasPage(int pageNum)
