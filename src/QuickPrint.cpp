@@ -84,12 +84,12 @@ bool QuickPrint::OnPrintPage(int pageNum)
     pDC.DrawText( "ÈËÆøÃû³Æ£º", 50, 80);
 
     char barcode[20] = {'2','2','2','2','0','8','0','9','5','1','0','0','0','0','0','1','\0','\0','\0','\0'};
-    //char barcode[3] = {'A','B','C'};
+    //char barcode[3] = {'A','B','\0'};
     Barcode128 gen;
     gen.Encode128C(barcode);
     //gen.Encode128A(barcode);
     std::cout << gen.ia_Buf[1] << gen.i_LenBuf << std::endl;
-    gen.Draw128(pDC,120,192,400,*wxBLACK, *wxWHITE, 3);
+    gen.Draw128(pDC,120,192,280,*wxBLACK, *wxWHITE, 3);
 }
 
 bool QuickPrint::HasPage(int pageNum)

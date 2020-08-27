@@ -18,6 +18,10 @@
 #include "wxtestMain.h"
 #include <wx/cmndata.h>
 #include "QuickPrint.h"
+#include "ConfigINI.h"
+#include <wx/tokenzr.h>
+#include "ContentModel.h"
+
 //helper functions
 enum wxbuildinfoformat {
     short_f, long_f };
@@ -106,8 +110,70 @@ void wxtestDialog::OnQuit(wxCommandEvent &event)
 
 void wxtestDialog::OnAbout(wxCommandEvent &event)
 {
+    //ConfigINI config;
     wxString msg = wxbuildinfo(long_f);
+
+    ConfigINI config;
+    config.LoadConfig("BarcodePrint.INI");
+    wxString value1 = config.GetConfigProp("String/String1");
+    //char* value1 = config.GetConfigPropWithUTF8("String/String1");
+   // wxString value(value1,wxConvUTF8);
+    //wxString value = config.GetWorkPath();
+    //wxMessageBox(value1, _("Welcome to..."));
+
+    //wxString msg = _T("sdf");
+
+    wxStringTokenizer tokenizer(value1, ",");
+    while ( tokenizer.HasMoreTokens() )
+    {
+        wxString token = tokenizer.GetNextToken();
+        wxMessageBox(token, _("Welcome to..."));
+        std::cout << token << std::endl;
+    }
+
     wxMessageBox(msg, _("Welcome to..."));
+
+/*
+    WX_DECLARE_LIST(wxString, MyList);
+    #include <wx/listimpl.cpp>
+    WX_DEFINE_LIST(MyList);
+    MyList list;
+    wxString car("car");
+    list.Append(&car);
+    wxString dog("dog");
+    list.Append(&dog);
+
+    wxString tempstr;
+
+    MyList::iterator iter;
+    for(iter = list.begin(); iter != list.end(); ++iter)
+    {
+
+        wxString str = iter;
+        tempstr.append(str);
+    }
+
+    wxMessageBox(tempstr, _("Welcome to..."));
+    */
+    ContentModelList ContentModels;
+    ContentModel OrgHead;
+    OrgHead.SetTitle("类似名称");
+    ContentModels.Append(&OrgHead);
+    ContentModel AssetName;
+    AssetName.SetTitle("非常名称");
+    ContentModels.Append(&AssetName);
+
+    wxString tempstr;
+    ContentModelList::iterator iter;
+    for(iter = ContentModels.begin(); iter != ContentModels.end(); ++iter)
+    {
+        ContentModel *str = *iter;
+        tempstr.append(str->GetTitle());
+    }
+
+    wxMessageBox(tempstr, _("Welcome to..."));
+
+
 }
 
 void wxtestDialog::OnInitDialog(wxInitDialogEvent& event)

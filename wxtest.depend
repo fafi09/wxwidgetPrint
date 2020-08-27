@@ -2663,7 +2663,7 @@
 1584183818 source:d:\workspace\wxwidgets\wxtest\resource.rc
 	"wx/msw/wx.rc"
 
-1598153390 source:d:\workspace\wxwidgets\wxtest\wxtestapp.cpp
+1598346930 source:d:\workspace\wxwidgets\wxtest\wxtestapp.cpp
 	"wx_pch.h"
 	"wxtestApp.h"
 	"wxtestMain.h"
@@ -2677,11 +2677,14 @@
 	<wx/button.h>
 	<wx/statline.h>
 
-1598253828 source:d:\workspace\wxwidgets\wxtest\wxtestmain.cpp
+1598508309 source:d:\workspace\wxwidgets\wxtest\wxtestmain.cpp
 	"wx_pch.h"
 	"wxtestMain.h"
 	<wx/cmndata.h>
 	"QuickPrint.h"
+	"ConfigINI.h"
+	<wx/tokenzr.h>
+	<wx/listimpl.cpp>
 
 1595438406 d:\wxwidgets\include\wx\app.h
 	"wx/event.h"
@@ -5328,7 +5331,7 @@
 	"wx/gdicmn.h"
 	"wx/stream.h"
 
-1598345254 source:d:\workspace\wxwidgets\wxtest\src\quickprint.cpp
+1598347098 source:d:\workspace\wxwidgets\wxtest\src\quickprint.cpp
 	"QuickPrint.h"
 	"Barcode128.h"
 
@@ -5386,4 +5389,87 @@
 
 1598339298 d:\workspace\wxwidgets\wxtest\include\barcode128.h
 	"BarcodeBase.h"
+
+1598427967 source:d:\workspace\wxwidgets\wxtest\src\configini.cpp
+	"ConfigINI.h"
+
+1598422534 d:\workspace\wxwidgets\wxtest\include\configini.h
+	"wx/stdpaths.h"
+	"wx/filename.h"
+	"wx/file.h"
+	"wx/fileconf.h"
+	"wx/wfstream.h"
+
+1595438406 d:\wxwidgets\include\wx\stdpaths.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/filefn.h"
+	"wx/msw/stdpaths.h"
+	"wx/osx/cocoa/stdpaths.h"
+	"wx/unix/stdpaths.h"
+
+1595438406 d:\wxwidgets\include\wx\msw\stdpaths.h
+
+1595438406 d:\wxwidgets\include\wx\osx\cocoa\stdpaths.h
+
+1595438406 d:\wxwidgets\include\wx\unix\stdpaths.h
+
+1595438406 d:\wxwidgets\include\wx\fileconf.h
+	"wx/defs.h"
+	"wx/textfile.h"
+	"wx/string.h"
+	"wx/confbase.h"
+	"wx/filename.h"
+
+1595438406 d:\wxwidgets\include\wx\textfile.h
+	"wx/defs.h"
+	"wx/textbuf.h"
+	"wx/file.h"
+
+1595438406 d:\wxwidgets\include\wx\textbuf.h
+	"wx/defs.h"
+	"wx/arrstr.h"
+	"wx/convauto.h"
+	"wx/string.h"
+	"wx/dynarray.h"
+
+1595438406 d:\wxwidgets\include\wx\confbase.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/object.h"
+	"wx/base64.h"
+
+1595438406 d:\wxwidgets\include\wx\base64.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/buffer.h"
+
+1595438406 d:\wxwidgets\include\wx\wfstream.h
+	"wx/defs.h"
+	"wx/object.h"
+	"wx/string.h"
+	"wx/stream.h"
+	"wx/file.h"
+	"wx/ffile.h"
+
+1595438406 d:\wxwidgets\include\wx\ffile.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/filefn.h"
+	"wx/convauto.h"
+	<stdio.h>
+
+1595438406 d:\wxwidgets\include\wx\tokenzr.h
+	"wx/object.h"
+	"wx/string.h"
+	"wx/arrstr.h"
+
+1595438406 d:\wxwidgets\include\wx\listimpl.cpp
+
+1598507305 source:d:\workspace\wxwidgets\wxtest\src\contentmodel.cpp
+	"ContentModel.h"
+
+1598508350 d:\workspace\wxwidgets\wxtest\include\contentmodel.h
+	<wx/string.h>
+	<wx/list.h>
 

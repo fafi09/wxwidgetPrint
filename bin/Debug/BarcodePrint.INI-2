@@ -1,0 +1,30 @@
+[PrinterConfig]
+PrinterName = 
+
+[Barcode]
+BarcodeCount = 1
+
+Barcode1 = 120, 192, 400, 90, 0, 20, Code128
+
+[Bitmap]
+BitmapCount = 1
+
+Bitmap1 = 30, 10, Trans.bmp
+
+[String]
+StringCount = 10
+
+String1 = 50, 45, 宋体, 25, 0, 0, 0, 0, 0, 机构名称：
+String2 = 50, 89, 宋体, 20, 0, 0, 0, 0, 0, 资产名称：
+String3 = 360, 89, 宋体, 20, 0, 0, 0, 0, 0, 车牌：
+String4 = 50, 123, 宋体, 20, 0, 0, 0, 0, 0, 品牌：
+String5 = 50, 157, 宋体, 20, 0, 0, 0, 0, 0, 型号：
+
+String6 = 178, 45, 宋体, 25, 0, 0, 0, 0, 0,
+String7 = 138, 89, 宋体, 20, 0, 0, 0, 0, 0,
+String8 = 430, 89, 宋体, 20, 0, 0, 0, 0, 0,
+String9 = 138, 123, 宋体, 20, 0, 0, 0, 0, 0,
+String10 = 138, 157, 宋体, 20, 0, 0, 0, 0, 0,
+
+[Other]
+SplitSign = |

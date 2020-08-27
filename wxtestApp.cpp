@@ -20,9 +20,10 @@
 
 IMPLEMENT_APP(wxtestApp);
 
+//https://github.com/fafi09/wxwidgetPrint.git
 bool wxtestApp::OnInit()
 {
-    
+
     wxtestDialog* dlg = new wxtestDialog(0L, _("wxWidgets Application Template"));
     dlg->SetIcon(wxICON(aaaa)); // To Set App Icon
     dlg->Show();
