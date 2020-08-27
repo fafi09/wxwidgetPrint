@@ -17,7 +17,9 @@ class QuickPrint : public wxPrintout
         bool OnPrintPage(int pageNum);
         bool HasPage(int pageNum);
         bool OnBeginDocument(int startPage, int endPage);
-
+        void DrawPageOne(wxDC *dc);
+        void DrawPageTwo(wxDC *dc);
+        void DrawBarcode(wxDC *dc);
     protected:
 
     private:
